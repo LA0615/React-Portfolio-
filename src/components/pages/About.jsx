@@ -1,6 +1,16 @@
-//ABOUT ME TITLE and ABOUT ME section should load by defaut on portfolio load
+
+function About() {
+  return (
+    <div>
+      <h1>Lea Arcidiacono</h1>
+      <p>This is the About page.</p>
+    </div>
+  );
+}
+
+export default About;
+
 
 //Recent photo or avatar
 
 
-//Short Bio about me
