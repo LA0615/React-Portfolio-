@@ -9,9 +9,9 @@ function Header({ handleNavClick }) {
         padding: 0;
       }
     `}</style>
-      <header style={{ backgroundColor: '#7DF9FF', textAlign: 'center', width: '100%'}}>
+      <header style={{ backgroundColor: '#7DF9FF', textAlign: 'center', width: '100%', height: '110px'}}>
         <h1>Lea Arcidiacono</h1>
-        <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <nav style={{ display: 'flex', justifyContent: 'flex-end', marginRight: '20px' }}>
           <a style={{ margin: '10px' }} onClick={() => handleNavClick("About")}>About Me</a>
           <a style={{ margin: '10px' }} onClick={() => handleNavClick("PortfolioPage")}>Portfolio</a>
           <a style={{ margin: '10px' }} onClick={() => handleNavClick("Contact")}>Contact</a>

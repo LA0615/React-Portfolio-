@@ -1,29 +1,38 @@
 import styled from 'styled-components';
 
 const StyledParagraph = styled.p`
-  font-size: 30px;
+  font-size: 24px;
   font-family: 'Arial, sans-serif';
   text-align: justify;
-  margin: 5%;
-  width: 100%;
+  maxWidth: 90%;
 
   @media (max-width: 768px) {
     font-size: 16px;
   }
 `;
+const Line = styled.div`
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+`;
+
 function About() {
   return (
+    <>
+    <Line />  
     <div style={{ 
       backgroundColor: '#E0FFFF', 
       minHeight: '100vh', 
       width: '100%', 
       display:'flex', 
-      FlexDirection: 'column', 
+      flexDirection: 'column', 
       alignItems: 'flex-start', 
       justifyContent: 'flex-start', 
-      padding: '20px',
+      padding: '20px 5%',
       boxSizing: 'border-box'
-    }}>     
+    }}>  
+    
      <h1 style={{ color: 'black', fontFamily: 'Arial, sans-serif', textAlign:'left', margin:'5%', fontSize: '48px' }}>About Me</h1>
      <StyledParagraph>
 
@@ -33,7 +42,9 @@ function About() {
         I like challenges, figuring out problems, and I am excited to see where this new career path will take me.
         Please take a moment to look at my portfolio and feel free to contact me with any questions.
       </StyledParagraph>
+      <Line />  
     </div>
+    </>
   );
 }
 
