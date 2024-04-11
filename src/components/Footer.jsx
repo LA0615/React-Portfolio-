@@ -1,7 +1,7 @@
 
 function Footer() {
   return (
-    <footer>
+    <footer style={{ backgroundColor: '#99FFFF', padding: '20px', textAlign: 'center', }}>
       <a href="https://github.com/LA0615" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:lea_arcidiacono@yahoo.com">Email me</a>

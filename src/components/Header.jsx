@@ -1,5 +1,29 @@
-//Appears on all pages
+import PropTypes from 'prop-types';
 
-//Header should have my name 
+function Header({ handleNavClick }) {
+  return (
+    <>
+    <style>{`
+      body, html, h1 {
+        margin: 0;
+        padding: 0;
+      }
+    `}</style>
+      <header style={{ backgroundColor: '#7DF9FF', textAlign: 'center', width: '100%'}}>
+        <h1>Lea Arcidiacono</h1>
+        <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <a style={{ margin: '10px' }} onClick={() => handleNavClick("About")}>About Me</a>
+          <a style={{ margin: '10px' }} onClick={() => handleNavClick("PortfolioPage")}>Portfolio</a>
+          <a style={{ margin: '10px' }} onClick={() => handleNavClick("Contact")}>Contact</a>
+          <a style={{ margin: '10px' }} onClick={() => handleNavClick("Resume")}>Resume</a>
+        </nav>
+      </header>
+    </>
+  );
+}
 
-//Header needs nav links to about, projects, resume, and contact information
+Header.propTypes = {
+  handleNavClick: PropTypes.func.isRequired,
+};
+
+export default Header;
