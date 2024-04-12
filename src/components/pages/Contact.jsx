@@ -26,7 +26,7 @@ const ContactTitle = styled.h1`
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 5%;
-  font-size: 60px;
+  font-size: 30px;
 `;
 const Form = styled.form`
   display: flex;
@@ -53,7 +53,7 @@ const SubmitButton = styled.button`
   }
 `;
 const MessageInput = styled.input`
-  width: 220%;
+  width: 190%;
   height: 200px;
   margin-left: -85px;
   `;
@@ -64,11 +64,12 @@ const Label = styled.label`
   justify-content: center;
   width: 100%;
   font-weight: bold;
+  font-size: 25px;
 `;
 
 const Input = styled.input`
-  height: 30px;
-  width: 20%;
+  height: 20px;
+  width: 40%;
   margin-left: 10px;
 `;
 const CenteredText = styled.div`
@@ -105,7 +106,11 @@ function Contact() {
  
       <ContactContainer>
         <ContactBox>
-        <ContactTitle>Contact Me</ContactTitle>
+        <ContactTitle>
+          <img src='/images/envelope-4313721_640.webp' alt='envelope' width='60' height='60' style={{ marginRight: '18px' }}/>
+          Contact Me
+          <img src='/images/envelope-4313721_640.webp' alt='envelope' width='60' height='60' style={{ marginLeft: '18px' }}/>
+          </ContactTitle>
       <Form>
         <Label>
           Name:
@@ -129,3 +134,4 @@ function Contact() {
 }
 
 export default Contact;
+

@@ -27,13 +27,14 @@ function About() {
       width: '100%', 
       display:'flex', 
       flexDirection: 'column', 
-      alignItems: 'flex-start', 
+      alignItems: 'center', 
       justifyContent: 'flex-start', 
       padding: '20px 5%',
       boxSizing: 'border-box'
     }}>  
     
-     <h1 style={{ color: 'black', fontFamily: 'Arial, sans-serif', textAlign:'left', margin:'5%', fontSize: '48px' }}>About Me</h1>
+     <h1 style={{ color: 'black', fontFamily: 'Arial, sans-serif', textAlign:'center', margin:'5%', fontSize: '48px' }}>About Me</h1>
+    <img src='/images/profilePic.png' alt='profilePic' style={{ width: '150px', height: '150px', borderRadius: '50%', }} />
      <StyledParagraph>
 
         I have always enjoyed learning and spent roughly eighteen years as an elementary and special education teacher.
@@ -50,3 +51,4 @@ function About() {
 
 export default About;
 
+//Need to add bitmoji to this page and maybe a quote to the bottom. 
