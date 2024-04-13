@@ -9,3 +9,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+
+
+//need to set up react router dom for the pages.

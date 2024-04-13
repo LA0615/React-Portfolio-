@@ -12,6 +12,8 @@ const ContactContainer = styled.div`
   justify-content: center;
   padding: 20px 0;
   box-sizing: border-box;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
 `;
 const ContactBox = styled.div`
   border: 3px solid black;
@@ -53,9 +55,9 @@ const SubmitButton = styled.button`
   }
 `;
 const MessageInput = styled.input`
-  width: 190%;
+  width: 100%;
   height: 200px;
-  margin-left: -85px;
+  margin: 5px;
   `;
 
 const Label = styled.label`
@@ -65,6 +67,8 @@ const Label = styled.label`
   width: 100%;
   font-weight: bold;
   font-size: 25px;
+  color: red;
+  font-style: italic;
 `;
 
 const Input = styled.input`
@@ -74,7 +78,13 @@ const Input = styled.input`
 `;
 const CenteredText = styled.div`
   text-align: center;
-  font-weight: bold;`;
+  font-weight: bold;
+  font-size: 25px;
+  color: red;
+  font-style: italic;
+  padding: 15px;
+  `;
+  
 function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -122,7 +132,7 @@ function Contact() {
           {emailError && <p>{emailError}</p>}
         </Label>
         <label>
-        <CenteredText>Message:</CenteredText>
+        <CenteredText>Send Me a Message:</CenteredText>
           <MessageInput type="text" name="message" value={message} onBlur={handleBlur} onChange={(e) => setMessage(e.target.value)} />
           {messageError && <p>{messageError}</p>}
         </label>
@@ -135,3 +145,4 @@ function Contact() {
 
 export default Contact;
 
+//Do we need regex for email validation?

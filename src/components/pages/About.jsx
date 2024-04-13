@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 const StyledParagraph = styled.p`
+color: #333;
   font-size: 24px;
   font-family: 'Arial, sans-serif';
   text-align: justify;
+  font-weight: bold;
+  text-indent: 50px;
   maxWidth: 90%;
 
   @media (max-width: 768px) {
@@ -12,8 +15,8 @@ const StyledParagraph = styled.p`
 `;
 const Line = styled.div`
   width: 100%;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
 
 `;
 
@@ -33,7 +36,7 @@ function About() {
       boxSizing: 'border-box'
     }}>  
     
-     <h1 style={{ color: 'black', fontFamily: 'Arial, sans-serif', textAlign:'center', margin:'5%', fontSize: '48px' }}>About Me</h1>
+     <h1 style={{ color: 'red', fontFamily: 'Arial, sans-serif', textAlign:'center', margin:'5%', fontSize: '48px' }}>About Me</h1>
     <img src='/images/profilePic.png' alt='profilePic' style={{ width: '150px', height: '150px', borderRadius: '50%', }} />
      <StyledParagraph>
 
