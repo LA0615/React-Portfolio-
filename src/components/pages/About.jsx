@@ -43,8 +43,8 @@ function About() {
         I have always enjoyed learning and spent roughly eighteen years as an elementary and special education teacher.
         I decided to make a career change and enrolled in a coding bootcamp. I am excited to begin my journey as a full stack developer and 
         have learned many different technologies including HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL, and more.
-        I like challenges, figuring out problems, and I am excited to see where this new career path will take me.
-        Please take a moment to look at my portfolio and feel free to contact me with any questions.
+        I like challenges, am detail oriented , and enjoy figuring out solutions to difficult problems or situations.  I am excited to see where this new career path will take me.
+        Please take a moment to look at my portfolio, resume, Github repository, and LinkedIn profile. Please contact me with any questions or potential employment opportunities.
       </StyledParagraph>
       <Line />  
     </div>
@@ -54,4 +54,3 @@ function About() {
 
 export default About;
 
-//Need to add bitmoji to this page and maybe a quote to the bottom. 

@@ -1,6 +1,18 @@
-import PropTypes from 'prop-types';
 
-function Header({ handleNavClick }) {
+
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Link as RouterLink } from 'react-router-dom';
+
+const Link = styled(RouterLink)`
+  margin: 10px;
+  cursor: pointer;
+  &:hover {
+    color: black;
+  }
+`;
+
+function Header() {
   return (
     <>
     <style>{`
@@ -12,10 +24,11 @@ function Header({ handleNavClick }) {
       <header style={{ backgroundColor: '#7DF9FF', textAlign: 'center', width: '100%', height: '110px'}}>
       <h1 style={{ paddingTop: '20px' }}>Lea Arcidiacono</h1>
         <nav style={{ display: 'flex', justifyContent: 'flex-end', marginRight: '35px', fontSize: '18px' ,}}>
-          <a style={{ margin: '10px' }} onClick={() => handleNavClick("About")}>About Me</a>
-          <a style={{ margin: '10px' }} onClick={() => handleNavClick("PortfolioPage")}>Portfolio</a>
-          <a style={{ margin: '10px' }} onClick={() => handleNavClick("Contact")}>Contact</a>
-          <a style={{ margin: '10px' }} onClick={() => handleNavClick("Resume")}>Resume</a>
+        <Link to = {'/'}>About Me</Link> 
+        <Link to = {'/portfolio'}>Portfolio</Link> 
+        <Link to = {'/contact'}>Contact</Link>
+        <Link to = {'/resume'} >Resume</Link> 
+
         </nav>
       </header>
     </>
@@ -23,7 +36,7 @@ function Header({ handleNavClick }) {
 }
 
 Header.propTypes = {
-  handleNavClick: PropTypes.func.isRequired,
+ // handleNavClick: PropTypes.func.isRequired,
 };
 
 export default Header;

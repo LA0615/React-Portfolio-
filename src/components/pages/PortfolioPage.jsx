@@ -25,6 +25,7 @@ width: 70%;
 bottom: 20px;
 padding: 20px;
 margin-right: 10px;
+background-color: #87CEEB;
 `;
 const Box = styled.div`
   background-color: lightyellow;

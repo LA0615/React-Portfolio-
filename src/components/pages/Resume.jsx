@@ -15,36 +15,53 @@ const ResumeContainer = styled.div`
 `;
 const ResumeBox = styled.div`
   border: 2px solid black; 
-  padding: 10px; 
+  padding: 5px; 
   width: fit-content; 
   margin: 0 auto; 
   width: 50%;
   height: 6%;
   border-radius: 20px;
+  background-color: lightyellow;
+  font-size: 18px;
 `;
 
+const BoldText = styled.p`
+  font-weight: bold;
+font-style: italic;
+color: black;
+`;
 
+const BoldListItem = styled.li`
+  font-weight: bold; 
+`;
+
+const CenteredLink = styled.a`
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #0014A8;
+
+  `;
 function Resume() {
     return (
         <ResumeContainer>
             <ResumeBox>
         <h1 style={{ color: 'red', fontFamily: 'Arial, sans-serif', textAlign:'center', margin:'5%', fontSize: '35px' }}>My Fullstack Developer Resume</h1>
-       <p>Here is a list of some skills I have learned during my time in coding bootcamp:</p>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>MongoDB</li>
-        <li>MySQL</li>
-        <li>API</li>
-
-  <a href="/assets/resume.pdf" download> Click to Download My Resume</a>
+        <BoldText>Here is a list of some skills I have learned during my time in coding bootcamp:</BoldText>
+                <BoldListItem>HTML</BoldListItem>
+                <BoldListItem>CSS</BoldListItem>
+                <BoldListItem>JavaScript</BoldListItem>
+                <BoldListItem>React</BoldListItem>
+                <BoldListItem>Node.js</BoldListItem>
+                <BoldListItem>Express</BoldListItem>
+                <BoldListItem>MongoDB</BoldListItem>
+                <BoldListItem>MySQL</BoldListItem>
+                <BoldListItem>API</BoldListItem>
+       <CenteredLink href="/assets/resume.pdf" download> Click to Download My Resume</CenteredLink>
        </ResumeBox>
         </ResumeContainer>
     );
 }
 
-//AND a List of developer skills
 export default Resume;

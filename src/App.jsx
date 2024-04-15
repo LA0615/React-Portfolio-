@@ -1,20 +1,18 @@
-import  { useState } from 'react';
 import Header from './components/Header';
-import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import './index.css';
+import Page from './components/pages/index.jsx'
+import {useLocation} from 'react-router-dom'
 
 function App() {
-  const [section, setSection] = useState('About');
-
-  const handleNavClick = (section) => {
-    setSection(section);
-  };
+const currentPage = useLocation().pathname;
+console.log(currentPage);
 
   return (
     <div className='portfolio'>
-      <Header handleNavClick={handleNavClick} />
-      <Portfolio section={section} />
+      <Header/>
+      {/* <Portfolio section={section} /> */}
+      <Page currentPage = {currentPage}/>
       <Footer />
     </div>
   );

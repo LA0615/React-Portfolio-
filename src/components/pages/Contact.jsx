@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
+
 const ContactContainer = styled.div`
   background-color: #E0FFFF;
   min-height: 100vh;
@@ -21,6 +22,7 @@ const ContactBox = styled.div`
   padding: 20px;
   width: 80%;
   box-sizing: border-box;
+  background-color: #87CEEB;
 `;
 
 const ContactTitle = styled.h1`
@@ -89,8 +91,7 @@ function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [messageError, setMessageError] = useState('');
+
 
   const handleBlur = (event) => {
     const { name, value } = event.target;
@@ -104,13 +105,18 @@ function Contact() {
     if (name === 'message' && !value) {
       alert('Message is required');
     }
-    if (name === 'email' && value && !value.includes('@')) {
-      setEmailError('Invalid email address');
+    if (name === 'email' && value) {
+      const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.test(value)) {
+        alert('Invalid email address');
+      }
     }
     if (name === 'message' && value && value.length < 10) {
-      setMessageError('Message must be at least 10 characters');
+      alert('Message must be at least 10 characters');
     }
   };
+
+
 
   return (
  
@@ -121,7 +127,7 @@ function Contact() {
           Contact Me
           <img src='/images/envelope-4313721_640.webp' alt='envelope' width='60' height='60' style={{ marginLeft: '18px' }}/>
           </ContactTitle>
-      <Form>
+          <Form>
         <Label>
           Name:
           <Input type="text" name="name" value={name} onBlur={handleBlur} onChange={(e) => setName(e.target.value)} />
@@ -129,12 +135,10 @@ function Contact() {
         <Label>
           Email:
           <Input type="email" name="email" value={email} onBlur={handleBlur} onChange={(e) => setEmail(e.target.value)} />
-          {emailError && <p>{emailError}</p>}
         </Label>
         <label>
         <CenteredText>Send Me a Message:</CenteredText>
           <MessageInput type="text" name="message" value={message} onBlur={handleBlur} onChange={(e) => setMessage(e.target.value)} />
-          {messageError && <p>{messageError}</p>}
         </label>
         <SubmitButton type="submit">Submit</SubmitButton>
       </Form>
@@ -145,4 +149,5 @@ function Contact() {
 
 export default Contact;
 
-//Do we need regex for email validation?
+
+
