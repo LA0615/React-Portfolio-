@@ -1,7 +1,6 @@
 
 
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Link = styled(RouterLink)`
@@ -36,7 +35,7 @@ function Header() {
 }
 
 Header.propTypes = {
- // handleNavClick: PropTypes.func.isRequired,
+
 };
 
 export default Header;
