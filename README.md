@@ -10,4 +10,4 @@ Please click the link to the application and view the screenshot below.
 
 ![Screenshot of app](<src/assets/App Screenshot.png>)
 
-[Link to deployed application](https://pwa-text-editor-qnew.onrender.com)
+[Link to deployed Portfolio Application](https://main--amazing-sable-a1d6bc.netlify.app/)

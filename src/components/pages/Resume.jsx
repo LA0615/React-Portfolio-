@@ -58,7 +58,7 @@ function Resume() {
                 <BoldListItem>MongoDB</BoldListItem>
                 <BoldListItem>MySQL</BoldListItem>
                 <BoldListItem>API</BoldListItem>
-       <CenteredLink href="/images/arcidiaconoResume.pdf" download> Click to Download My Resume</CenteredLink>
+       <CenteredLink href="images/arcidiaconoResume.pdf" download> Click to Download My Resume</CenteredLink>
        </ResumeBox>
         </ResumeContainer>
     );
